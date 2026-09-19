@@ -7,23 +7,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap');
 
 :root{
-  /* surfaces — quiet, near-monochrome */
-  --base:      #eef0f3;
-  --base-deep: #e4e7ec;
-  --shade:     #c9ced6;
-  --light:     #f4f5f7;
+  /* surfaces — white, flat */
+  --base:      #ffffff;
+  --base-deep: #eef2f7;
+  --shade:     #c7d3e0;
+  --light:     #ffffff;
 
-  /* one accent, used sparingly */
-  --navy:  #454e59;
-  --blue:  #5c6673;
-  --blue-soft: #e3e6ea;
-  --gold:  #8b93a0;
-  --gold-deep: #6f7784;
+  /* blue accent only */
+  --navy:  #2f5aa8;
+  --blue:  #3f74c9;
+  --blue-soft: #eaf1fb;
+  --gold:  #5c7ca3;
+  --gold-deep: #3f5b7d;
 
   /* text */
-  --ink:   #232a32;
-  --body:  #57616e;
-  --muted: #8a92a0;
+  --ink:   #1c2b3d;
+  --body:  #4b5d72;
+  --muted: #8494a8;
 
   /* states — muted, not saturated */
   --ok:    #4c7a63;
@@ -35,10 +35,11 @@
   --r-md: 18px;
   --r-sm: 12px;
 
-  --out: 8px 8px 16px var(--shade), -8px -8px 16px var(--light);
-  --out-sm: 5px 5px 10px var(--shade), -5px -5px 10px var(--light);
-  --in: inset 5px 5px 10px var(--shade), inset -5px -5px 10px var(--light);
-  --in-sm: inset 3px 3px 6px var(--shade), inset -3px -3px 6px var(--light);
+  /* soft, low-contrast shadows — no bright glow */
+  --out: 7px 7px 15px rgba(151,171,199,.38), -7px -7px 15px rgba(255,255,255,.55);
+  --out-sm: 4px 4px 9px rgba(151,171,199,.35), -4px -4px 9px rgba(255,255,255,.5);
+  --in: inset 4px 4px 9px rgba(151,171,199,.38), inset -4px -4px 9px rgba(255,255,255,.5);
+  --in-sm: inset 3px 3px 6px rgba(151,171,199,.32), inset -3px -3px 6px rgba(255,255,255,.45);
 }
 
 *{ box-sizing:border-box; margin:0; padding:0; }
@@ -72,7 +73,7 @@ a:hover{ text-decoration:underline; }
 .campus-bg{
   position:fixed;
   inset:0;
-  background:url('building.jpg') center 35% / cover no-repeat;
+  background:url('../assets/building.jpg') center 35% / cover no-repeat;
   filter:grayscale(45%) brightness(.5);
   z-index:-2;
 }
@@ -81,7 +82,7 @@ a:hover{ text-decoration:underline; }
   position:absolute;
   inset:0;
   background:
-    linear-gradient(180deg, rgba(30,34,40,.45), rgba(30,34,40,.55) 40%, rgba(238,240,243,.96) 100%);
+    linear-gradient(180deg, rgba(21,38,64,.5), rgba(21,38,64,.55) 40%, rgba(255,255,255,.97) 100%);
   backdrop-filter:blur(2px);
 }
 
