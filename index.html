@@ -6,6 +6,7 @@
 <title>Sign in — Student Complaint Management System | Norzagaray College</title>
 <link rel="icon" href="logo.png">
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body class="auth-page">
 
@@ -21,6 +22,7 @@
 
 <div class="auth-card" id="authCard">
 
+  <!-- tabs (mobile only) -->
   <div class="auth-tabs">
     <button class="tab on" id="tabIn" type="button" onclick="showSignIn()">Sign in</button>
     <button class="tab" id="tabUp" type="button" onclick="showRegister()">Register</button>
@@ -30,8 +32,14 @@
   <div class="form-side side-signin">
     <form class="auth-form" action="dashboard.html" method="get">
       <img class="crest-mark" src="assets/logo.png" alt="">
-      <h1>Sign in</h1>
-      <p class="lede">Use the school email issued by the Registrar.</p>
+      <h1>Sign in to your account</h1>
+
+      <div class="social-row">
+        <a href="#" class="social-dot" title="Sign in with your school Google account"><i class="fa-brands fa-google"></i></a>
+        <a href="#" class="social-dot" title="Sign in with Microsoft 365"><i class="fa-brands fa-microsoft"></i></a>
+        <a href="#" class="social-dot" title="Sign in with the NC Student Portal"><i class="fa-solid fa-graduation-cap"></i></a>
+      </div>
+      <p class="divider-note">OR USE YOUR SCHOOL EMAIL</p>
 
       <label class="field">
         <span>School email</span>
@@ -53,8 +61,14 @@
   <div class="form-side side-register">
     <form class="auth-form" action="dashboard.html" method="get">
       <img class="crest-mark" src="assets/logo.png" alt="">
-      <h1>Create an account</h1>
-      <p class="lede">One account per enrolled student.</p>
+      <h1>Create your account</h1>
+
+      <div class="social-row">
+        <a href="#" class="social-dot" title="Register with your school Google account"><i class="fa-brands fa-google"></i></a>
+        <a href="#" class="social-dot" title="Register with Microsoft 365"><i class="fa-brands fa-microsoft"></i></a>
+        <a href="#" class="social-dot" title="Register with the NC Student Portal"><i class="fa-solid fa-graduation-cap"></i></a>
+      </div>
+      <p class="divider-note">OR USE YOUR SCHOOL EMAIL FOR REGISTRATION</p>
 
       <label class="field">
         <span>Full name</span>
@@ -87,8 +101,24 @@
         <input type="password" name="password" placeholder="At least 8 characters" required>
       </label>
 
-      <button class="btn btn-wide" type="submit" style="margin-top:8px">Create account</button>
+      <button class="btn btn-wide" type="submit" style="margin-top:6px">Create account</button>
     </form>
+  </div>
+
+  <!-- sliding panel -->
+  <div class="slide-panel">
+    <div class="panel-face panel-left">
+      <img src="assets/logo.png" alt="">
+      <h2>Already registered?</h2>
+      <p>Sign in to follow up on a complaint you filed or check a repair request.</p>
+      <button class="btn btn-ghost" type="button" onclick="showSignIn()">Sign in</button>
+    </div>
+    <div class="panel-face panel-right">
+      <img src="assets/logo.png" alt="">
+      <h2>New here?</h2>
+      <p>Register once, then raise concerns about a teacher, staff member, dean, or damaged facility.</p>
+      <button class="btn btn-ghost" type="button" onclick="showRegister()">Register</button>
+    </div>
   </div>
 
 </div>
