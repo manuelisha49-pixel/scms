@@ -72,7 +72,7 @@ a:hover{ text-decoration:underline; }
 .campus-bg{
   position:fixed;
   inset:0;
-  background:url('../assets/building.jpg') center 35% / cover no-repeat;
+  background:url('building.jpg') center 35% / cover no-repeat;
   filter:grayscale(45%) brightness(.5);
   z-index:-2;
 }
