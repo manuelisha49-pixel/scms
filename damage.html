@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Report damage — Student Complaint Management System</title>
+<link rel="icon" href="assets/logo.png">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="campus-bg"></div>
+
+<div class="shell">
+
+  <aside class="rail">
+    <div class="rail-brand">
+      <img src="assets/logo.png" alt="Norzagaray College seal">
+      <div>
+        <div class="brand-name">Norzagaray College</div>
+        <div class="brand-sub">Complaint Management</div>
+      </div>
+    </div>
+
+    <nav class="nav">
+      <span class="nav-label">Student</span>
+      <a href="dashboard.html"><span class="ico">▣</span> Dashboard</a>
+      <a href="complaint.html"><span class="ico">✎</span> File a complaint</a>
+      <a href="damage.html" class="on"><span class="ico">⚠</span> Report damage</a>
+      <a href="reports.html"><span class="ico">≡</span> My reports</a>
+      <span class="nav-label">Office use</span>
+      <a href="admin.html"><span class="ico">◈</span> Program overview</a>
+      <a href="index.html"><span class="ico">⏻</span> Sign out</a>
+    </nav>
+
+    <div class="rail-user">
+      <div class="avatar">JD</div>
+      <div>
+        <b>Juan Dela Cruz</b>
+        <span>CS · 2024-00518</span>
+      </div>
+    </div>
+  </aside>
+
+  <main class="main">
+
+    <div class="topbar">
+      <div>
+        <h1>Report damage</h1>
+        <p>Broken or unsafe property in a room, laboratory, or kitchen. Maintenance sees these first.</p>
+      </div>
+    </div>
+
+    <form action="reports.html" method="get">
+
+      <div class="card">
+        <div class="card-head">
+          <div>
+            <h2>Which program owns the area?</h2>
+            <p>Each program keeps its own repair log and equipment list.</p>
+          </div>
+        </div>
+
+        <div class="choice-grid c4">
+          <label class="choice">
+            <input type="radio" name="program" value="BSED">
+            <span class="box">
+              <span class="tag">BSED</span>
+              <b>Secondary Education</b>
+              <small>Lecture rooms, demo classrooms, AV sets</small>
+            </span>
+          </label>
+          <label class="choice">
+            <input type="radio" name="program" value="BEED">
+            <span class="box">
+              <span class="tag">BEED</span>
+              <b>Elementary Education</b>
+              <small>Teaching aids, activity rooms, storage</small>
+            </span>
+          </label>
+          <label class="choice">
+            <input type="radio" name="program" value="HM">
+            <span class="box">
+              <span class="tag">HM</span>
+              <b>Hospitality Management</b>
+              <small>Training kitchen, mock hotel room, utensils</small>
+            </span>
+          </label>
+          <label class="choice">
+            <input type="radio" name="program" value="CS" checked>
+            <span class="box">
+              <span class="tag">CS</span>
+              <b>Computer Science</b>
+              <small>Computer labs, units, network gear</small>
+            </span>
+          </label>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-head">
+          <div>
+            <h2>What is damaged?</h2>
+            <p>One item or area per report so repairs can be tracked separately.</p>
+          </div>
+        </div>
+
+        <div class="form-grid">
+          <label class="field">
+            <span>Building and room</span>
+            <input type="text" name="room" placeholder="Main Building — Room 205" required>
+          </label>
+
+          <label class="field">
+            <span>Item or facility</span>
+            <input type="text" name="item" placeholder="Desktop unit PC-14" required>
+          </label>
+
+          <label class="field">
+            <span>Category</span>
+            <select name="category" required>
+              <option value="" selected disabled>Select a category</option>
+              <option>Electrical — lights, outlets, fans, aircon</option>
+              <option>Computer and network equipment</option>
+              <option>Kitchen or laboratory equipment</option>
+              <option>Furniture — chairs, tables, cabinets</option>
+              <option>Plumbing and comfort rooms</option>
+              <option>Structure — doors, windows, ceiling, floor</option>
+              <option>Other</option>
+            </select>
+          </label>
+
+          <label class="field">
+            <span>Date noticed</span>
+            <input type="date" name="date" required>
+          </label>
+
+          <label class="field span-2">
+            <span>Describe the damage</span>
+            <textarea name="details" placeholder="What is broken, how it behaves, and whether the room can still be used." required></textarea>
+          </label>
+
+          <label class="field span-2">
+            <span>Photo of the damage (optional)</span>
+            <input type="file" name="photo" accept="image/*" multiple>
+            <span class="form-note">A clear photo speeds up the inspection.</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-head">
+          <div>
+            <h2>How urgent is it?</h2>
+            <p>Anything that can injure a student should be marked unsafe.</p>
+          </div>
+        </div>
+
+        <div class="scale">
+          <label class="choice">
+            <input type="radio" name="severity" value="minor" checked>
+            <span class="box">
+              <b>Minor</b>
+              <small>Classes continue as normal.</small>
+            </span>
+          </label>
+          <label class="choice">
+            <input type="radio" name="severity" value="disruptive">
+            <span class="box">
+              <b>Disruptive</b>
+              <small>The room or equipment is hard to use.</small>
+            </span>
+          </label>
+          <label class="choice">
+            <input type="radio" name="severity" value="unusable">
+            <span class="box">
+              <b>Unusable</b>
+              <small>Classes have to move somewhere else.</small>
+            </span>
+          </label>
+          <label class="choice">
+            <input type="radio" name="severity" value="unsafe">
+            <span class="box">
+              <b>Unsafe</b>
+              <small>Someone could get hurt. Flagged immediately.</small>
+            </span>
+          </label>
+        </div>
+
+        <div class="switch-row" style="margin-top:20px">
+          <label class="switch">
+            <input type="checkbox" name="witness">
+            <span class="track"></span>
+          </label>
+          <div>
+            <b>I saw how it happened</b>
+            <small>Maintenance may ask you for a short statement.</small>
+          </div>
+        </div>
+
+        <div class="form-actions">
+          <a href="dashboard.html" class="btn btn-soft">Cancel</a>
+          <button class="btn btn-gold" type="submit">Send to Maintenance</button>
+        </div>
+      </div>
+
+    </form>
+
+  </main>
+</div>
+</body>
+</html>

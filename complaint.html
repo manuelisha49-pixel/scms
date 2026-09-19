@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>File a complaint — Student Complaint Management System</title>
+<link rel="icon" href="assets/logo.png">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="campus-bg"></div>
+
+<div class="shell">
+
+  <aside class="rail">
+    <div class="rail-brand">
+      <img src="assets/logo.png" alt="Norzagaray College seal">
+      <div>
+        <div class="brand-name">Norzagaray College</div>
+        <div class="brand-sub">Complaint Management</div>
+      </div>
+    </div>
+
+    <nav class="nav">
+      <span class="nav-label">Student</span>
+      <a href="dashboard.html"><span class="ico">▣</span> Dashboard</a>
+      <a href="complaint.html" class="on"><span class="ico">✎</span> File a complaint</a>
+      <a href="damage.html"><span class="ico">⚠</span> Report damage</a>
+      <a href="reports.html"><span class="ico">≡</span> My reports</a>
+      <span class="nav-label">Office use</span>
+      <a href="admin.html"><span class="ico">◈</span> Program overview</a>
+      <a href="index.html"><span class="ico">⏻</span> Sign out</a>
+    </nav>
+
+    <div class="rail-user">
+      <div class="avatar">JD</div>
+      <div>
+        <b>Juan Dela Cruz</b>
+        <span>CS · 2024-00518</span>
+      </div>
+    </div>
+  </aside>
+
+  <main class="main">
+
+    <div class="topbar">
+      <div>
+        <h1>File a complaint</h1>
+        <p>Your name is visible only to the office that handles the case.</p>
+      </div>
+    </div>
+
+    <form action="reports.html" method="get">
+
+      <div class="card">
+        <div class="card-head">
+          <div>
+            <h2>Which program are you enrolled in?</h2>
+            <p>This routes the complaint to the correct program head.</p>
+          </div>
+        </div>
+
+        <div class="choice-grid c4">
+          <label class="choice">
+            <input type="radio" name="program" value="BSED" checked>
+            <span class="box">
+              <span class="tag">BSED</span>
+              <b>Secondary Education</b>
+              <small>Bachelor of Secondary Education</small>
+            </span>
+          </label>
+          <label class="choice">
+            <input type="radio" name="program" value="BEED">
+            <span class="box">
+              <span class="tag">BEED</span>
+              <b>Elementary Education</b>
+              <small>Bachelor of Elementary Education</small>
+            </span>
+          </label>
+          <label class="choice">
+            <input type="radio" name="program" value="HM">
+            <span class="box">
+              <span class="tag">HM</span>
+              <b>Hospitality Management</b>
+              <small>Kitchen, service, and hotel operations</small>
+            </span>
+          </label>
+          <label class="choice">
+            <input type="radio" name="program" value="CS">
+            <span class="box">
+              <span class="tag">CS</span>
+              <b>Computer Science</b>
+              <small>Laboratories and computing subjects</small>
+            </span>
+          </label>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-head">
+          <div>
+            <h2>Who is the complaint about?</h2>
+            <p>Choose one. The case goes to the office above the person named.</p>
+          </div>
+        </div>
+
+        <div class="choice-grid c3">
+          <label class="choice">
+            <input type="radio" name="against" value="teacher" checked>
+            <span class="box">
+              <b>Teacher</b>
+              <small>An instructor handling one of your subjects this term.</small>
+            </span>
+          </label>
+          <label class="choice">
+            <input type="radio" name="against" value="faculty-staff">
+            <span class="box">
+              <b>Faculty staff</b>
+              <small>Registrar, cashier, library, clinic, guard, or office personnel.</small>
+            </span>
+          </label>
+          <label class="choice">
+            <input type="radio" name="against" value="dean">
+            <span class="box">
+              <b>Dean</b>
+              <small>Goes straight to the Office of the College President.</small>
+            </span>
+          </label>
+        </div>
+
+        <div class="form-grid" style="margin-top:20px">
+          <label class="field">
+            <span>Name of the person</span>
+            <input type="text" name="person" placeholder="Prof. M. Santos">
+          </label>
+          <label class="field">
+            <span>Office, subject, or section involved</span>
+            <input type="text" name="context" placeholder="CS 3A — Data Structures">
+          </label>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-head">
+          <div>
+            <h2>What happened?</h2>
+            <p>Give dates and details. Attach proof if you have any.</p>
+          </div>
+        </div>
+
+        <div class="form-grid">
+          <label class="field">
+            <span>Type of concern</span>
+            <select name="category" required>
+              <option value="" selected disabled>Select a type</option>
+              <option>Grading or records</option>
+              <option>Conduct or unfair treatment</option>
+              <option>Class schedule or absences</option>
+              <option>Fees, payments, or receipts</option>
+              <option>Office service and response time</option>
+              <option>Harassment or bullying</option>
+              <option>Other</option>
+            </select>
+          </label>
+
+          <label class="field">
+            <span>Date it happened</span>
+            <input type="date" name="date" required>
+          </label>
+
+          <label class="field span-2">
+            <span>Subject line</span>
+            <input type="text" name="subject" placeholder="Midterm grades were not released on time" required>
+          </label>
+
+          <label class="field span-2">
+            <span>Full description</span>
+            <textarea name="details" placeholder="Describe what happened, who was present, and what you have already tried." required></textarea>
+            <span class="form-note">Say what outcome you are asking for — a correction, a meeting, or an explanation.</span>
+          </label>
+
+          <label class="field span-2">
+            <span>Evidence (optional)</span>
+            <input type="file" name="evidence" multiple>
+            <span class="form-note">Screenshots, photos, or scanned documents. Up to 5 files, 10&nbsp;MB each.</span>
+          </label>
+        </div>
+
+        <div class="switch-row" style="margin-top:18px">
+          <label class="switch">
+            <input type="checkbox" name="anonymous">
+            <span class="track"></span>
+          </label>
+          <div>
+            <b>Hide my name from the person involved</b>
+            <small>The handling office still sees your identity so they can reply to you.</small>
+          </div>
+        </div>
+
+        <div class="form-actions">
+          <a href="dashboard.html" class="btn btn-soft">Cancel</a>
+          <button class="btn" type="submit">Submit complaint</button>
+        </div>
+      </div>
+
+    </form>
+
+  </main>
+</div>
+</body>
+</html>

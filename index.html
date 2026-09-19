@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sign in — Student Complaint Management System | Norzagaray College</title>
+<link rel="icon" href="assets/logo.png">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="auth-page">
+
+<div class="campus-bg"></div>
+
+<div class="auth-crest">
+  <img src="assets/logo.png" alt="Norzagaray College seal">
+  <div>
+    <div class="brand-name">Norzagaray College</div>
+    <div class="brand-sub">Student Complaint Management System</div>
+  </div>
+</div>
+
+<div class="auth-card" id="authCard">
+
+  <!-- tabs (mobile only) -->
+  <div class="auth-tabs">
+    <button class="tab on" id="tabIn" type="button" onclick="showSignIn()">Sign in</button>
+    <button class="tab" id="tabUp" type="button" onclick="showRegister()">Register</button>
+  </div>
+
+  <!-- SIGN IN -->
+  <div class="form-side side-signin">
+    <form class="auth-form" action="dashboard.html" method="get">
+      <h1>Sign in to your account</h1>
+      <p class="lede">Use the student number issued by the Registrar.</p>
+
+      <div class="social-row">
+        <a href="#" class="social-dot" title="Sign in with your school Google account">G</a>
+        <a href="#" class="social-dot" title="Sign in with Microsoft 365">M</a>
+        <a href="#" class="social-dot" title="Sign in with the NC Student Portal">NC</a>
+      </div>
+      <p class="divider-note">or use your school email</p>
+
+      <label class="field">
+        <span>School email</span>
+        <input type="email" name="email" placeholder="juan.delacruz@norzagaraycollege.edu.ph" required>
+      </label>
+
+      <label class="field">
+        <span>Password</span>
+        <input type="password" name="password" placeholder="••••••••" required>
+      </label>
+
+      <a href="#" class="forgot">Forgot your password?</a>
+
+      <button class="btn btn-wide" type="submit">Sign in</button>
+    </form>
+  </div>
+
+  <!-- REGISTER -->
+  <div class="form-side side-register">
+    <form class="auth-form" action="dashboard.html" method="get">
+      <h1>Create your account</h1>
+      <p class="lede">One account per enrolled student.</p>
+
+      <div class="social-row">
+        <a href="#" class="social-dot" title="Register with your school Google account">G</a>
+        <a href="#" class="social-dot" title="Register with Microsoft 365">M</a>
+        <a href="#" class="social-dot" title="Register with the NC Student Portal">NC</a>
+      </div>
+      <p class="divider-note">or fill in your details</p>
+
+      <label class="field">
+        <span>Full name</span>
+        <input type="text" name="name" placeholder="Juan P. Dela Cruz" required>
+      </label>
+
+      <label class="field">
+        <span>Student number</span>
+        <input type="text" name="sn" placeholder="2024-00518" required>
+      </label>
+
+      <label class="field">
+        <span>Program</span>
+        <select name="program" required>
+          <option value="" selected disabled>Select your program</option>
+          <option>BSED — Bachelor of Secondary Education</option>
+          <option>BEED — Bachelor of Elementary Education</option>
+          <option>HM — Hospitality Management</option>
+          <option>CS — Computer Science</option>
+        </select>
+      </label>
+
+      <label class="field">
+        <span>School email</span>
+        <input type="email" name="email" placeholder="juan.delacruz@norzagaraycollege.edu.ph" required>
+      </label>
+
+      <label class="field">
+        <span>Password</span>
+        <input type="password" name="password" placeholder="At least 8 characters" required>
+      </label>
+
+      <button class="btn btn-wide" type="submit" style="margin-top:8px">Create account</button>
+    </form>
+  </div>
+
+  <!-- sliding blue panel -->
+  <div class="slide-panel">
+    <div class="panel-inner">
+      <div class="panel-face panel-left">
+        <img src="assets/logo.png" alt="">
+        <h2>Already registered?</h2>
+        <p>Sign in to follow up on a complaint you filed or check a repair request.</p>
+        <button class="btn btn-ghost" type="button" onclick="showSignIn()">Sign in</button>
+        <div class="panel-rule"></div>
+      </div>
+      <div class="panel-face panel-right">
+        <img src="assets/logo.png" alt="">
+        <h2>New here?</h2>
+        <p>Register once, then raise concerns about a teacher, staff member, dean, or damaged facility.</p>
+        <button class="btn btn-ghost" type="button" onclick="showRegister()">Register</button>
+        <div class="panel-rule"></div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<p class="auth-foot">Every report is logged with a reference number. Norzagaray College · Est. 2006</p>
+
+<script>
+  const card = document.getElementById('authCard');
+  const tabIn = document.getElementById('tabIn');
+  const tabUp = document.getElementById('tabUp');
+
+  function showRegister(){
+    card.classList.add('show-register');
+    tabUp.classList.add('on'); tabIn.classList.remove('on');
+  }
+  function showSignIn(){
+    card.classList.remove('show-register');
+    tabIn.classList.add('on'); tabUp.classList.remove('on');
+  }
+</script>
+</body>
+</html>

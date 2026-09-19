@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dashboard — Student Complaint Management System</title>
+<link rel="icon" href="assets/logo.png">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="campus-bg"></div>
+
+<div class="shell">
+
+  <aside class="rail">
+    <div class="rail-brand">
+      <img src="assets/logo.png" alt="Norzagaray College seal">
+      <div>
+        <div class="brand-name">Norzagaray College</div>
+        <div class="brand-sub">Complaint Management</div>
+      </div>
+    </div>
+
+    <nav class="nav">
+      <span class="nav-label">Student</span>
+      <a href="dashboard.html" class="on"><span class="ico">▣</span> Dashboard</a>
+      <a href="complaint.html"><span class="ico">✎</span> File a complaint</a>
+      <a href="damage.html"><span class="ico">⚠</span> Report damage</a>
+      <a href="reports.html"><span class="ico">≡</span> My reports</a>
+      <span class="nav-label">Office use</span>
+      <a href="admin.html"><span class="ico">◈</span> Program overview</a>
+      <a href="index.html"><span class="ico">⏻</span> Sign out</a>
+    </nav>
+
+    <div class="rail-user">
+      <div class="avatar">JD</div>
+      <div>
+        <b>Juan Dela Cruz</b>
+        <span>CS · 2024-00518</span>
+      </div>
+    </div>
+  </aside>
+
+  <main class="main">
+
+    <div class="topbar">
+      <div>
+        <h1>Good morning, Juan</h1>
+        <p>You have one complaint waiting on a response from the Dean's office.</p>
+      </div>
+      <div class="topbar-actions">
+        <a href="damage.html" class="btn btn-soft">Report damage</a>
+        <a href="complaint.html" class="btn">File a complaint</a>
+      </div>
+    </div>
+
+    <div class="grid g-4">
+      <div class="stat">
+        <div class="n">3</div>
+        <div class="k">Reports you filed</div>
+        <div class="bar"><i style="width:100%"></i></div>
+      </div>
+      <div class="stat">
+        <div class="n">1</div>
+        <div class="k">Under review</div>
+        <div class="bar"><i class="gold" style="width:33%"></i></div>
+      </div>
+      <div class="stat">
+        <div class="n">2</div>
+        <div class="k">Resolved</div>
+        <div class="bar"><i class="ok" style="width:66%"></i></div>
+      </div>
+      <div class="stat">
+        <div class="n">4d</div>
+        <div class="k">Average time to first reply</div>
+        <div class="bar"><i style="width:48%"></i></div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:22px">
+      <div class="card-head">
+        <div>
+          <h2>Start a report</h2>
+          <p>Pick the kind of concern you want to raise.</p>
+        </div>
+      </div>
+
+      <div class="grid g-2">
+        <a href="complaint.html" class="stat" style="display:block">
+          <span class="chip">Person</span>
+          <h3 style="margin:10px 0 6px">Complaint about a teacher, staff member, or dean</h3>
+          <p class="muted">Grading disputes, conduct, class schedules, unfair treatment, service at an office window.</p>
+        </a>
+        <a href="damage.html" class="stat" style="display:block">
+          <span class="chip">Facility</span>
+          <h3 style="margin:10px 0 6px">Damaged room, equipment, or tool</h3>
+          <p class="muted">Broken chairs, busted aircon, faulty PC units, kitchen equipment, lab apparatus.</p>
+        </a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-head">
+        <div>
+          <h2>Your recent reports</h2>
+          <p>Reference numbers are permanent — keep them for follow-ups.</p>
+        </div>
+        <a href="reports.html" class="btn btn-soft">See all</a>
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Reference</th>
+              <th>About</th>
+              <th>Program</th>
+              <th>Filed</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="ref">CMP-2026-0431</span><span class="sub">Complaint · Teacher</span></td>
+              <td>Grades for Data Structures were not released<span class="sub">Handled by the CS program head</span></td>
+              <td><span class="chip">CS</span></td>
+              <td>16 Sep 2026</td>
+              <td><span class="pill review">Under review</span></td>
+            </tr>
+            <tr>
+              <td><span class="ref">DMG-2026-0187</span><span class="sub">Damage · Room 205</span></td>
+              <td>Two ceiling fans not working during afternoon classes<span class="sub">Forwarded to Maintenance</span></td>
+              <td><span class="chip">CS</span></td>
+              <td>09 Sep 2026</td>
+              <td><span class="pill done">Resolved</span></td>
+            </tr>
+            <tr>
+              <td><span class="ref">CMP-2026-0402</span><span class="sub">Complaint · Faculty staff</span></td>
+              <td>Registrar window closed before posted hours<span class="sub">Response sent 05 Sep</span></td>
+              <td><span class="chip">CS</span></td>
+              <td>02 Sep 2026</td>
+              <td><span class="pill done">Resolved</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </main>
+</div>
+</body>
+</html>
