@@ -8,17 +8,7 @@
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
-<body class="auth-page">
-
-<div class="campus-bg"></div>
-
-<div class="auth-crest">
-  <img src="logo.png" alt="Norzagaray College seal">
-  <div>
-    <div class="brand-name">Norzagaray College</div>
-    <div class="brand-sub">Student Complaint Management System</div>
-  </div>
-</div>
+<body class="auth-page" style="background:var(--base)">
 
 <div class="auth-card" id="authCard">
 
@@ -31,8 +21,9 @@
   <!-- SIGN IN -->
   <div class="form-side side-signin">
     <form class="auth-form" action="dashboard.html" method="get">
-      <img class="crest-mark" src="assets/logo.png" alt="">
+      <span class="avatar-badge"><img src="avatar.png" alt=""></span>
       <h1>Sign in to your account</h1>
+      <p class="lede">Norzagaray College · Student Complaint Management System</p>
 
       <div class="social-row">
         <a href="#" class="social-dot" title="Sign in with your school Google account"><i class="fa-brands fa-google"></i></a>
@@ -60,8 +51,9 @@
   <!-- REGISTER -->
   <div class="form-side side-register">
     <form class="auth-form" action="dashboard.html" method="get">
-      <img class="crest-mark" src="assets/logo.png" alt="">
+      <span class="avatar-badge"><img src="avatar.png" alt=""></span>
       <h1>Create your account</h1>
+      <p class="lede">Norzagaray College · Student Complaint Management System</p>
 
       <div class="social-row">
         <a href="#" class="social-dot" title="Register with your school Google account"><i class="fa-brands fa-google"></i></a>
@@ -77,7 +69,7 @@
 
       <label class="field">
         <span>Student number</span>
-        <input type="text" name="sn" placeholder="2024-00518" required>
+        <input type="text" name="sn" placeholder="2025-0448" required>
       </label>
 
       <label class="field">
@@ -108,13 +100,13 @@
   <!-- sliding panel -->
   <div class="slide-panel">
     <div class="panel-face panel-left">
-      <img src="assets/logo.png" alt="">
+      <img src="logo.png" alt="Norzagaray College seal">
       <h2>Already registered?</h2>
       <p>Sign in to follow up on a complaint you filed or check a repair request.</p>
       <button class="btn btn-ghost" type="button" onclick="showSignIn()">Sign in</button>
     </div>
     <div class="panel-face panel-right">
-      <img src="assets/logo.png" alt="">
+      <img src="logo.png" alt="Norzagaray College seal">
       <h2>New here?</h2>
       <p>Register once, then raise concerns about a teacher, staff member, dean, or damaged facility.</p>
       <button class="btn btn-ghost" type="button" onclick="showRegister()">Register</button>
@@ -123,7 +115,7 @@
 
 </div>
 
-<p class="auth-foot">Every report is logged with a reference number. Norzagaray College · Est. 2006</p>
+<p class="auth-foot">Norzagaray College · Est. 2006 — every report is logged with a reference number.</p>
 
 <script>
   const card = document.getElementById('authCard');
