@@ -7,39 +7,39 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap');
 
 :root{
-  /* surfaces — white, flat */
+  /* surfaces — flat white */
   --base:      #ffffff;
-  --base-deep: #eef2f7;
-  --shade:     #c7d3e0;
+  --base-deep: #eef3fa;
+  --shade:     #b9c8dc;
   --light:     #ffffff;
 
-  /* blue accent only */
-  --navy:  #2f5aa8;
-  --blue:  #3f74c9;
-  --blue-soft: #eaf1fb;
-  --gold:  #5c7ca3;
-  --gold-deep: #3f5b7d;
+  /* dark blue accent only */
+  --navy:  #0d2a52;
+  --blue:  #14417f;
+  --blue-soft: #e7edf6;
+  --gold:  #35577f;
+  --gold-deep: #0d2a52;
 
   /* text */
-  --ink:   #1c2b3d;
-  --body:  #4b5d72;
-  --muted: #8494a8;
+  --ink:   #0d1b2d;
+  --body:  #3d4a5c;
+  --muted: #7c879a;
 
-  /* states — muted, not saturated */
-  --ok:    #4c7a63;
-  --warn:  #a17a42;
-  --stop:  #a24a42;
+  /* states — kept muted so status pills stay readable */
+  --ok:    #2e6b4f;
+  --warn:  #94661f;
+  --stop:  #9a3a33;
 
   /* shape */
-  --r-lg: 26px;
-  --r-md: 18px;
-  --r-sm: 12px;
+  --r-lg: 22px;
+  --r-md: 14px;
+  --r-sm: 10px;
 
-  /* soft, low-contrast shadows — no bright glow */
-  --out: 7px 7px 15px rgba(151,171,199,.38), -7px -7px 15px rgba(255,255,255,.55);
-  --out-sm: 4px 4px 9px rgba(151,171,199,.35), -4px -4px 9px rgba(255,255,255,.5);
-  --in: inset 4px 4px 9px rgba(151,171,199,.38), inset -4px -4px 9px rgba(255,255,255,.5);
-  --in-sm: inset 3px 3px 6px rgba(151,171,199,.32), inset -3px -3px 6px rgba(255,255,255,.45);
+  /* flat — thin outline only, no blur, no glow */
+  --out: 0 0 0 1.5px var(--shade);
+  --out-sm: 0 0 0 1.5px var(--shade);
+  --in: 0 0 0 1.5px var(--shade);
+  --in-sm: 0 0 0 1.5px var(--shade);
 }
 
 *{ box-sizing:border-box; margin:0; padding:0; }
@@ -74,7 +74,7 @@ a:hover{ text-decoration:underline; }
   position:fixed;
   inset:0;
   background:url('building.jpg') center 35% / cover no-repeat;
-  filter:grayscale(45%) brightness(.5);
+  filter:grayscale(30%) brightness(.3);
   z-index:-2;
 }
 .campus-bg::after{
