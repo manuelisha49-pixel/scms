@@ -44,7 +44,7 @@
 
 *{ box-sizing:border-box; margin:0; padding:0; }
 
-html{ -webkit-text-size-adjust:100%; }
+html{ -webkit-text-size-adjust:100%; overflow-x:hidden; }
 
 body{
   font-family:'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
@@ -73,8 +73,8 @@ a:hover{ text-decoration:underline; }
 .campus-bg{
   position:fixed;
   inset:0;
-  background:url('building.jpg') center 35% / cover no-repeat;
-  filter:grayscale(30%) brightness(.3);
+  background:url('../assets/building.jpg') center 35% / cover no-repeat;
+  filter:grayscale(45%) brightness(.5);
   z-index:-2;
 }
 .campus-bg::after{
@@ -116,7 +116,7 @@ a:hover{ text-decoration:underline; }
 /* the animated split card */
 .auth-card{
   position:relative;
-  width:min(900px, 100%);
+  width:min(900px, 92vw);
   min-height:560px;
   background:var(--base);
   border-radius:var(--r-lg);
@@ -188,6 +188,17 @@ a:hover{ text-decoration:underline; }
   margin:0 auto 12px;
   display:block;
 }
+.avatar-badge{
+  width:64px; height:64px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin:0 auto 14px;
+  border-radius:50%;
+  background:var(--blue-soft);
+  box-shadow:var(--out-sm);
+}
+.avatar-badge img{ width:34px; height:34px; object-fit:contain; }
 .auth-form h1{ font-size:1.4rem; font-weight:800; }
 .auth-form .lede{ font-size:.8rem; color:var(--muted); margin:6px 0 18px; }
 
