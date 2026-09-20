@@ -8,7 +8,6 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="campus-bg"></div>
 
 <div class="shell">
 
@@ -25,7 +24,6 @@
       <span class="nav-label">Student</span>
       <a href="dashboard.html" class="on"><span class="ico">▣</span> Dashboard</a>
       <a href="complaint.html"><span class="ico">✎</span> File a complaint</a>
-      <a href="damage.html"><span class="ico">⚠</span> Report damage</a>
       <a href="reports.html"><span class="ico">≡</span> My reports</a>
       <span class="nav-label">Office use</span>
       <a href="admin.html"><span class="ico">◈</span> Program overview</a>
@@ -33,73 +31,41 @@
     </nav>
 
     <div class="rail-user">
-      <div class="avatar">JD</div>
+      <div class="avatar"><img src="avatar.png" alt=""></div>
       <div>
-        <b>Juan Dela Cruz</b>
-        <span>CS · 2024-00518</span>
+        <b>Manuel, Krissia L.</b>
+        <span>CS · 2025-0448</span>
       </div>
     </div>
   </aside>
 
   <main class="main">
 
-    <div class="topbar">
-      <div>
-        <h1>Good morning, Juan</h1>
-        <p>You have one complaint waiting on a response from the Dean's office.</p>
-      </div>
-      <div class="topbar-actions">
-        <a href="damage.html" class="btn btn-soft">Report damage</a>
-        <a href="complaint.html" class="btn">File a complaint</a>
-      </div>
+    <div class="report-hero">
+      <h1>Start a report here</h1>
+      <p>Pick the kind of concern you want to raise.</p>
     </div>
 
-    <div class="grid g-4">
-      <div class="stat">
-        <div class="n">3</div>
-        <div class="k">Reports you filed</div>
-        <div class="bar"><i style="width:100%"></i></div>
-      </div>
-      <div class="stat">
-        <div class="n">1</div>
-        <div class="k">Under review</div>
-        <div class="bar"><i class="gold" style="width:33%"></i></div>
-      </div>
-      <div class="stat">
-        <div class="n">2</div>
-        <div class="k">Resolved</div>
-        <div class="bar"><i class="ok" style="width:66%"></i></div>
-      </div>
-      <div class="stat">
-        <div class="n">4d</div>
-        <div class="k">Average time to first reply</div>
-        <div class="bar"><i style="width:48%"></i></div>
-      </div>
-    </div>
-
-    <div class="card" style="margin-top:22px">
-      <div class="card-head">
+    <div class="report-tiles">
+      <a href="complaint.html" class="report-tile">
+        <span class="tag">Person</span>
         <div>
-          <h2>Start a report</h2>
-          <p>Pick the kind of concern you want to raise.</p>
+          <h3>File a complaint</h3>
+          <p>About a teacher, staff member, or dean — grading, conduct, schedules, or office service.</p>
         </div>
-      </div>
-
-      <div class="grid g-2">
-        <a href="complaint.html" class="stat" style="display:block">
-          <span class="chip">Person</span>
-          <h3 style="margin:10px 0 6px">Complaint about a teacher, staff member, or dean</h3>
-          <p class="muted">Grading disputes, conduct, class schedules, unfair treatment, service at an office window.</p>
-        </a>
-        <a href="damage.html" class="stat" style="display:block">
-          <span class="chip">Facility</span>
-          <h3 style="margin:10px 0 6px">Damaged room, equipment, or tool</h3>
-          <p class="muted">Broken chairs, busted aircon, faulty PC units, kitchen equipment, lab apparatus.</p>
-        </a>
-      </div>
+        <span class="go">→</span>
+      </a>
+      <a href="damage.html" class="report-tile">
+        <span class="tag">Facility</span>
+        <div>
+          <h3>Report damage</h3>
+          <p>A broken room, tool, or equipment — chairs, aircon, PC units, kitchen or lab gear.</p>
+        </div>
+        <span class="go">→</span>
+      </a>
     </div>
 
-    <div class="card">
+    <div class="card" style="margin-top:26px">
       <div class="card-head">
         <div>
           <h2>Your recent reports</h2>
