@@ -131,6 +131,13 @@ a:hover{ text-decoration:underline; }
   justify-content:center;
   text-align:center;
   padding:30px;
+  overflow:hidden;
+  transition:flex-basis .5s ease, opacity .35s ease, padding .5s ease;
+}
+.auth-card.show-register .auth-photo{
+  flex-basis:0%;
+  opacity:0;
+  padding:0;
 }
 .auth-photo::after{
   content:'';
@@ -153,8 +160,6 @@ a:hover{ text-decoration:underline; }
   letter-spacing:.02em;
   line-height:1.25;
 }
-
-.auth-card.show-register .auth-photo{ display:none; }
 
 /* ---- right: the two swappable panels ---- */
 .auth-right{
