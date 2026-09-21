@@ -111,7 +111,6 @@ a:hover{ text-decoration:underline; }
 /* the whole card: photo panel + form panels, as one row */
 .auth-card{
   position:relative;
-  display:flex;
   width:min(1000px, 94vw);
   min-height:560px;
   background:var(--nm-bg);
@@ -122,8 +121,10 @@ a:hover{ text-decoration:underline; }
 
 /* ---- left: campus photo panel ---- */
 .auth-photo{
-  position:relative;
-  flex:0 0 38%;
+  position:absolute;
+  top:0; left:0;
+  height:100%;
+  width:38%;
   background:url('building.jpg') center 35% / cover no-repeat;
   display:flex;
   flex-direction:column;
@@ -132,10 +133,11 @@ a:hover{ text-decoration:underline; }
   text-align:center;
   padding:30px;
   overflow:hidden;
-  transition:flex-basis .5s ease, opacity .35s ease, padding .5s ease;
+  transition:left .55s ease, width .55s ease, opacity .35s ease, padding .55s ease;
 }
 .auth-card.show-register .auth-photo{
-  flex-basis:0%;
+  left:-6%;
+  width:0%;
   opacity:0;
   padding:0;
 }
@@ -162,43 +164,39 @@ a:hover{ text-decoration:underline; }
 }
 
 /* ---- right: the two swappable panels ---- */
-.auth-right{
-  position:relative;
-  flex:1;
-  overflow:hidden;
-}
-
 .form-side{
   position:absolute;
   top:0;
+  left:38%;
   height:100%;
-  width:62%;
+  width:38.44%;
   display:flex;
   align-items:center;
   justify-content:center;
   padding:44px 42px;
   background:var(--base-deep);
-  transition:transform .6s ease-in-out, opacity .45s ease-in-out;
+  transition:left .55s ease, width .55s ease, opacity .4s ease;
 }
-.side-signin{ left:0; z-index:2; }
-.side-register{ left:0; opacity:0; z-index:1; }
+.side-signin{ opacity:1; z-index:2; }
+.side-register{ opacity:0; z-index:1; }
 
-.auth-card.show-register .side-signin{ transform:translateX(100%); opacity:0; z-index:1; }
-.auth-card.show-register .side-register{ transform:translateX(100%); opacity:1; z-index:5; }
+.auth-card.show-register .form-side{ left:0%; width:62%; }
+.auth-card.show-register .side-signin{ opacity:0; z-index:1; }
+.auth-card.show-register .side-register{ opacity:1; z-index:5; }
 
 /* the panel that slides across to reveal the other side */
 .slide-panel{
   position:absolute;
   top:0;
-  left:62%;
-  width:38%;
+  left:76.44%;
+  width:23.56%;
   height:100%;
   overflow:hidden;
   z-index:10;
   background:linear-gradient(150deg, var(--navy), var(--blue) 85%);
-  transition:transform .6s ease-in-out;
+  transition:left .55s ease, width .55s ease;
 }
-.auth-card.show-register .slide-panel{ transform:translateX(-163%); }
+.auth-card.show-register .slide-panel{ left:62%; width:38%; }
 
 .panel-face{
   position:absolute;
@@ -767,19 +765,24 @@ td .sub{ display:block; font-size:.73rem; color:var(--muted); }
 }
 
 @media (max-width: 900px){
-  .auth-card{ flex-direction:column; min-height:0; }
-  .auth-photo{ flex:0 0 160px; }
+  .auth-card{ min-height:0; }
+  .auth-photo{
+    position:static;
+    width:100%;
+    height:140px;
+    padding:18px;
+  }
   .auth-photo h2{ font-size:1.1rem; }
-  .auth-photo .seal{ width:70px; height:70px; margin-bottom:10px; }
-  .auth-right{ min-height:520px; }
+  .auth-photo .seal{ width:60px; height:60px; margin-bottom:8px; }
+  .auth-card.show-register .auth-photo{ display:none; }
   .slide-panel{ display:none; }
   .form-side{
     position:static;
-    width:100%;
+    left:auto !important;
+    width:100% !important;
     padding:26px 24px 30px;
-    transform:none !important;
   }
-  .side-register{ display:none; opacity:1; }
+  .side-register{ display:none; }
   .auth-card.show-register .side-signin{ display:none; }
   .auth-card.show-register .side-register{ display:flex; }
   .auth-tabs{ display:flex; gap:8px; padding:14px 14px 0; }
