@@ -78,9 +78,13 @@
       <div class="card-head">
         <div>
           <h2>Complaints waiting for action</h2>
-          <p>Sorted by how long they have been open.</p>
+          <p>Sorted by how long they have been open. Visible only to authorized office accounts.</p>
         </div>
-        <label class="field" style="margin:0; min-width:180px">
+      </div>
+
+      <div class="form-grid" style="margin-bottom:18px">
+        <label class="field" style="margin:0">
+          <span>Program</span>
           <select>
             <option>All programs</option>
             <option>BSED</option>
@@ -88,6 +92,33 @@
             <option>HM</option>
             <option>CS</option>
           </select>
+        </label>
+        <label class="field" style="margin:0">
+          <span>Category</span>
+          <select>
+            <option>All categories</option>
+            <option>Grading or records</option>
+            <option>Conduct or unfair treatment</option>
+            <option>Class schedule or absences</option>
+            <option>Fees, payments, or receipts</option>
+            <option>Office service and response time</option>
+            <option>Harassment or bullying</option>
+            <option>Other</option>
+          </select>
+        </label>
+        <label class="field" style="margin:0">
+          <span>Status</span>
+          <select>
+            <option>All statuses</option>
+            <option>New</option>
+            <option>Under review</option>
+            <option>Escalated</option>
+            <option>Resolved</option>
+          </select>
+        </label>
+        <label class="field" style="margin:0">
+          <span>Date filed</span>
+          <input type="date">
         </label>
       </div>
 
@@ -145,8 +176,45 @@
       <div class="card-head">
         <div>
           <h2>Damage and repair log</h2>
-          <p>Unsafe items are inspected within 24 hours.</p>
+          <p>Unsafe items are inspected within 24 hours. Visible only to authorized office accounts.</p>
         </div>
+      </div>
+
+      <div class="form-grid" style="margin-bottom:18px">
+        <label class="field" style="margin:0">
+          <span>Program</span>
+          <select>
+            <option>All programs</option>
+            <option>BSED</option>
+            <option>BEED</option>
+            <option>HM</option>
+            <option>CS</option>
+          </select>
+        </label>
+        <label class="field" style="margin:0">
+          <span>Severity</span>
+          <select>
+            <option>All severities</option>
+            <option>Minor</option>
+            <option>Disruptive</option>
+            <option>Unusable</option>
+            <option>Unsafe</option>
+          </select>
+        </label>
+        <label class="field" style="margin:0">
+          <span>Status</span>
+          <select>
+            <option>All statuses</option>
+            <option>Reported</option>
+            <option>Inspection set</option>
+            <option>Parts ordered</option>
+            <option>Repaired</option>
+          </select>
+        </label>
+        <label class="field" style="margin:0">
+          <span>Date reported</span>
+          <input type="date">
+        </label>
       </div>
 
       <div class="table-wrap">
@@ -201,5 +269,6 @@
 
   </main>
 </div>
+<script src="profile.js"></script>
 </body>
 </html>
