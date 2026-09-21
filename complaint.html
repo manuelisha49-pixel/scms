@@ -102,19 +102,12 @@
           </div>
         </div>
 
-        <div class="choice-grid c4">
+        <div class="choice-grid c3">
           <label class="choice">
             <input type="radio" name="against" value="teacher" checked>
             <span class="box">
               <b>Teacher</b>
               <small>An instructor handling one of your subjects this term.</small>
-            </span>
-          </label>
-          <label class="choice">
-            <input type="radio" name="against" value="student">
-            <span class="box">
-              <b>Student</b>
-              <small>A conflict, bullying, or another concern with a fellow student.</small>
             </span>
           </label>
           <label class="choice">
@@ -128,7 +121,7 @@
             <input type="radio" name="against" value="dean">
             <span class="box">
               <b>Dean</b>
-              <small>Goes straight to the Office of the College President.</small>
+              <small>Goes to the dean of your program.</small>
             </span>
           </label>
         </div>
@@ -136,11 +129,11 @@
         <div class="form-grid" style="margin-top:20px">
           <label class="field">
             <span>Name of the person</span>
-            <input type="text" name="person" placeholder="Prof. M. Santos">
+            <input type="text" name="person">
           </label>
           <label class="field">
-            <span>Office, subject, or section involved</span>
-            <input type="text" name="context" placeholder="CS 3A — Data Structures">
+            <span>Subject and section</span>
+            <input type="text" name="context">
           </label>
         </div>
       </div>
@@ -174,13 +167,8 @@
           </label>
 
           <label class="field span-2">
-            <span>Subject line</span>
-            <input type="text" name="subject" placeholder="Midterm grades were not released on time" required>
-          </label>
-
-          <label class="field span-2">
             <span>Full description</span>
-            <textarea name="details" placeholder="Describe what happened, who was present, and what you have already tried." required></textarea>
+            <textarea name="details" required></textarea>
             <span class="form-note">Say what outcome you are asking for — a correction, a meeting, or an explanation.</span>
           </label>
 
