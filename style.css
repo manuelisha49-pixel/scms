@@ -574,8 +574,17 @@ select{ appearance:none; cursor:pointer;
 .choice-grid.c4{ grid-template-columns:repeat(4,1fr); }
 .choice-grid.c3{ grid-template-columns:repeat(3,1fr); }
 
-.choice input{ position:absolute; opacity:0; width:0; height:0; }
-.choice{ display:block; cursor:pointer; }
+.choice input{
+  position:absolute;
+  top:0; left:0;
+  opacity:0;
+  width:0; height:0;
+  margin:0;
+  appearance:none;
+  -webkit-appearance:none;
+  pointer-events:none;
+}
+.choice{ position:relative; display:block; cursor:pointer; }
 .choice .box{
   border-radius:var(--r-md);
   box-shadow:var(--out-sm);
