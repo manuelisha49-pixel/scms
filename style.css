@@ -211,11 +211,12 @@ a:hover{ text-decoration:underline; }
   padding:0 30px;
   color:#fff;
   opacity:0;
+  pointer-events:none;
   transition:opacity .35s ease .1s;
 }
-.panel-left{ opacity:1; }
-.auth-card.show-register .panel-left{ opacity:0; }
-.auth-card.show-register .panel-right{ opacity:1; }
+.panel-left{ opacity:1; pointer-events:auto; }
+.auth-card.show-register .panel-left{ opacity:0; pointer-events:none; }
+.auth-card.show-register .panel-right{ opacity:1; pointer-events:auto; }
 
 .panel-face h2{ color:#fff; font-size:1.35rem; font-weight:800; }
 .panel-face p{ font-size:.83rem; color:#e2defb; max-width:26ch; margin:10px 0 20px; }
