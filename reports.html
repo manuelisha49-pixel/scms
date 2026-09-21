@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>My reports — Student Complaint Management System</title>
+<link rel="icon" href="logo.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="shell">
+
+  <aside class="rail">
+    <div class="rail-brand">
+      <img src="logo.png" alt="Norzagaray College seal">
+      <div>
+        <div class="brand-name">Norzagaray College</div>
+        <div class="brand-sub">Complaint Management</div>
+      </div>
+    </div>
+
+    <nav class="nav">
+      <span class="nav-label">Student</span>
+      <a href="dashboard.html"><span class="ico">▣</span> Dashboard</a>
+      <a href="complaint.html"><span class="ico">✎</span> File a complaint</a>
+      <a href="reports.html" class="on"><span class="ico">≡</span> My reports</a>
+      <span class="nav-label">Office use</span>
+      <a href="admin.html"><span class="ico">◈</span> Program overview</a>
+      <a href="index.html"><span class="ico">⏻</span> Sign out</a>
+    </nav>
+
+    <div class="rail-user">
+      <div class="avatar"><img src="avatar.png" alt=""></div>
+      <div>
+        <b>Manuel, Krissia L.</b>
+        <span>CS · 2025-0448</span>
+      </div>
+    </div>
+  </aside>
+
+  <main class="main">
+
+    <div class="topbar">
+      <div>
+        <h1>My reports</h1>
+        <p>Everything you have filed, newest first.</p>
+      </div>
+      <div class="topbar-actions">
+        <a href="damage.html" class="btn btn-soft">Report damage</a>
+        <a href="complaint.html" class="btn">File a complaint</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-head">
+        <div>
+          <h2>Filed by you</h2>
+          <p>Quote the reference number when you visit an office.</p>
+        </div>
+        <label class="field" style="margin:0; min-width:190px">
+          <select>
+            <option>All reports</option>
+            <option>Complaints only</option>
+            <option>Damage reports only</option>
+            <option>Still open</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Reference</th>
+              <th>Subject</th>
+              <th>Directed to</th>
+              <th>Program</th>
+              <th>Filed</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="ref">CMP-2026-0431</span><span class="sub">Complaint</span></td>
+              <td>Midterm grades not released<span class="sub">Data Structures, CS 3A</span></td>
+              <td>Teacher<span class="sub">Prof. M. Santos</span></td>
+              <td><span class="chip">CS</span></td>
+              <td>16 Sep 2026</td>
+              <td><span class="pill review">Under review</span></td>
+            </tr>
+            <tr>
+              <td><span class="ref">DMG-2026-0187</span><span class="sub">Damage</span></td>
+              <td>Ceiling fans not working<span class="sub">Main Building — Room 205</span></td>
+              <td>Maintenance<span class="sub">Work order issued</span></td>
+              <td><span class="chip">CS</span></td>
+              <td>09 Sep 2026</td>
+              <td><span class="pill done">Resolved</span></td>
+            </tr>
+            <tr>
+              <td><span class="ref">CMP-2026-0402</span><span class="sub">Complaint</span></td>
+              <td>Window closed before posted hours<span class="sub">Registrar's Office</span></td>
+              <td>Faculty staff<span class="sub">Records section</span></td>
+              <td><span class="chip">CS</span></td>
+              <td>02 Sep 2026</td>
+              <td><span class="pill done">Resolved</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-head">
+        <div>
+          <h2>CMP-2026-0431 · Midterm grades not released</h2>
+          <p>Filed 16 September 2026 · Against a teacher · Computer Science</p>
+        </div>
+        <span class="pill review">Under review</span>
+      </div>
+
+      <div class="grid g-2">
+        <div class="track-list">
+          <div class="track-item">
+            <div class="track-dot done">✓</div>
+            <div>
+              <b>Complaint received</b>
+              <p>16 Sep, 9:12 AM — Reference number issued automatically.</p>
+            </div>
+          </div>
+          <div class="track-item">
+            <div class="track-dot done">✓</div>
+            <div>
+              <b>Routed to the CS program head</b>
+              <p>16 Sep, 2:40 PM — Assigned to the department for checking.</p>
+            </div>
+          </div>
+          <div class="track-item">
+            <div class="track-dot">3</div>
+            <div>
+              <b>Under review</b>
+              <p>17 Sep — The teacher was asked to respond within five working days.</p>
+            </div>
+          </div>
+          <div class="track-item">
+            <div class="track-dot">4</div>
+            <div>
+              <b>Decision and reply</b>
+              <p>Pending. You will get an email and a notice here.</p>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="empty">
+            <b>No message from the office yet</b>
+            <p class="muted">When the program head replies, the thread appears here. You can add a follow-up any time.</p>
+          </div>
+          <label class="field" style="margin-top:16px">
+            <span>Add a follow-up</span>
+            <textarea placeholder="Add new details or attach a document." style="min-height:90px"></textarea>
+          </label>
+          <div style="display:flex; justify-content:flex-end">
+            <button class="btn" type="button">Send follow-up</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+</div>
+</body>
+</html>
